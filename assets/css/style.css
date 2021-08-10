@@ -281,7 +281,7 @@ a:active {
   font-family: ProximaNova;
   color: #034adb;
   border-radius: 8px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .btn-download span img {
@@ -292,7 +292,7 @@ a:active {
 /*================Experience===========*/
 .btn-submit {
   background: #034adb;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-family: ProximaNova;
   color: #fff;
 }
@@ -308,7 +308,7 @@ a:active {
   font-family: ProximaNova;
   opacity: 1;
   /* Firefox */
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -320,7 +320,7 @@ a:active {
   font-family: ProximaNova;
   opacity: 1;
   /* Firefox */
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -332,7 +332,7 @@ a:active {
   font-family: ProximaNova;
   opacity: 1;
   /* Firefox */
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -344,7 +344,7 @@ a:active {
   font-family: ProximaNova;
   opacity: 1;
   /* Firefox */
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,5 +369,76 @@ a:active {
 
 #download .content-header-body .btn-container {
   text-align: center;
+}
+
+/******** end download*************/
+/*********footer***********/
+.footer-padding {
+  padding: 30px 10px;
+}
+
+footer .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33%;
+          flex: 1 1 33%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .img-container img {
+  height: 50px;
+}
+
+footer .link-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .link-container ul li .btn-link {
+  font-family: ProximaNova;
+  font-size: 0.75rem;
+  color: #27282c;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+footer .follow-container {
+  margin: 0 auto;
+}
+
+footer .follow-container h5 {
+  font-family: ProximaNova;
+  font-size: .75rem;
+  color: #27282c;
+}
+
+footer .follow-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .follow-container ul li {
+  margin: 0px 5px;
+}
+
+footer .follow-container ul li .btn-img span img {
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
