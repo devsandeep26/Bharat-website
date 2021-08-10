@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+button {
+  outline: none !important;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: 0 !important;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus,
+.btn:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+//font variables
+$header-font: ProximaNovaExtraBold;
+$paragraph-font: ProximaNova;
+$paragraph-semi-bold-font: ProximaNovaSemiBold;
+//color-variables
+$blue: #034adb;
+$text-color: #27282c;
+@font-face {
+  font-family: ProximaNovaExtraBold;
+  src: url("../fonts/Proxima/ProximaNova-Extrabld.ttf");
+}
+
+@font-face {
+  font-family: ProximaNovaSemiBold;
+  src: url("../fonts/Proxima/ProximaNova-Semibold.ttf");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Proxima/ProximaNova-Regular.ttf");
+}
+
+/******Mixins*****/
+@mixin marginAuto($value) {
+  margin: 0 auto;
+  width: $value;
+}
+
+/*******=============***/
+
+.layout-margin {
+  @include marginAuto(90%);
+}
+
+/**===Browser features=====**/
+@at-root .content-header-container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.content-header-body {
+  h2 {
+    font-size: 1.6rem;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: $text-color;
+    font-family: $header-font;
+  }
+  h5 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-family: $paragraph-font;
+    img {
+      height: 30px;
+      width: 30px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: $blue;
+    font-family: $paragraph-font;
+    @include marginAuto(75%);
+  }
+  .header-img {
+      display: flex;
+      justify-content: center;
+      img {
+          height: 100px;
+      }
+  }
+}
+
+.card {
+  border: 0;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+.predict-margin {
+  @include marginAuto(90%);
+}
+#features .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.1);
+  margin: 10px 15px;
+  height: 14rem;
+  padding: 20px 10px;
+  border-radius: 10px;
+  img {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+#features .card-title {
+  /* font-weight: normal; */
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: normal;
+  text-align: center;
+  color: $text-color;
+  font-family: $header-font;
+  font-size: 1.1rem;
+}
+
+#features .card .card-body {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#features .card-body .card-text {
+  font-size: 0.75rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.82;
+  letter-spacing: normal;
+  text-align: center;
+  color: $text-color;
+  font-family: $paragraph-font;
+  height: 5rem;
+}
+
+/**====highlights=====**/
+
+#highlights .col-md-12:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+#highlights .img-container {
+  @include marginAuto(50%);
+  display: flex;
+  justify-content: center;
+  img {
+    height: 300px;
+  }
+}
+
+#highlights .text-container {
+  @include marginAuto(50%);
+  h5 {
+    font-family: $header-font;
+    font-size: 1.2rem;
+    color: $text-color;
+  }
+  p {
+    font-family: $paragraph-font;
+    font-size: 0.8rem;
+    color: $text-color;
+    width: 85%;
+  }
+}
+
+/*============end highlights=========*/
+
+/*======Rating========*/
+
+#rating .img-container {
+  background-image: url(/assets/images/app_rating.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  border-radius: 20px;
+
+  .rating-container {
+      padding: 10px 3rem;
+    .text {
+      display: flex;
+      align-items: center;
+      height: 4rem;
+      p {
+        font-family: $header-font;
+        color: #fff;
+        font-size: 3.5rem;
+      }
+      span {
+        height: 100px;
+        width: 100px;
+        position: relative;
+        top: 20px;
+        left: 10px;
+        font-family: $paragraph-semi-bold-font;
+        color: #fff;
+        font-size: 1.4rem;
+        line-height: 30px;
+      }
+    }
+
+    .download-container {
+        width: 175px;
+    }
+  }
+}
+
+.btn-download {
+    background-color: #fff;
+    font-family: $paragraph-font;
+    color: $blue;
+    border-radius: 8px;
+    font-size: .8rem;
+
+    span img {
+        height: 15px;
+    }
+}
+
+/*===================end rating=============*/
+
+
+/*================Experience===========*/
+
+.btn-submit {
+    background: $blue;
+    font-size: .8rem;
+    font-family: $paragraph-font;
+    color: #fff;
+}
+
+#experience .form-control {
+    width: 15rem;
+    border: 1px solid #adadad;
+    padding: 5px 15px;
+}
+
+#inputEmail::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: $paragraph-font;
+    opacity: 1; /* Firefox */
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+  }
+
+
+  /*****==== end experience =====********/
+  .download-img {
+    background-image: url(/assets/images/app_rating.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    border-radius: 10px;
+  }
+
+  #download .content-header-body {
+      h2 {
+          color: #fff;
+      }
+      .btn-container {
+          text-align: center;
+      }
+  }
+
+

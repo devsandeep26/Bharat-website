@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+button {
+  outline: none !important;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+  text-decoration: none;
+  outline: 0 !important;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus,
+.btn:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+@font-face {
+  font-family: ProximaNovaExtraBold;
+  src: url("../fonts/Proxima/ProximaNova-Extrabld.ttf");
+}
+
+@font-face {
+  font-family: ProximaNovaSemiBold;
+  src: url("../fonts/Proxima/ProximaNova-Semibold.ttf");
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url("../fonts/Proxima/ProximaNova-Regular.ttf");
+}
+
+/******Mixins*****/
+/*******=============***/
+.layout-margin {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/**===Browser features=====**/
+.content-header-container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+.content-header-body h2 {
+  font-size: 1.6rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #27282c;
+  font-family: ProximaNovaExtraBold;
+}
+
+.content-header-body h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  margin-top: 1rem;
+  font-family: ProximaNova;
+}
+
+.content-header-body h5 img {
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.content-header-body p {
+  font-size: 0.8rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #034adb;
+  font-family: ProximaNova;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.content-header-body .header-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content-header-body .header-img img {
+  height: 100px;
+}
+
+.card {
+  border: 0;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.predict-margin {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#features .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 16px 30px 0 rgba(0, 0, 0, 0.1);
+  margin: 10px 15px;
+  height: 14rem;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+#features .card img {
+  height: 75px;
+  width: 75px;
+}
+
+#features .card-title {
+  /* font-weight: normal; */
+  font-style: normal;
+  line-height: 1.76;
+  letter-spacing: normal;
+  text-align: center;
+  color: #27282c;
+  font-family: ProximaNovaExtraBold;
+  font-size: 1.1rem;
+}
+
+#features .card .card-body {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+#features .card-body .card-text {
+  font-size: 0.75rem;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.82;
+  letter-spacing: normal;
+  text-align: center;
+  color: #27282c;
+  font-family: ProximaNova;
+  height: 5rem;
+}
+
+/**====highlights=====**/
+#highlights .col-md-12:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+#highlights .img-container {
+  margin: 0 auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#highlights .img-container img {
+  height: 300px;
+}
+
+#highlights .text-container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#highlights .text-container h5 {
+  font-family: ProximaNovaExtraBold;
+  font-size: 1.2rem;
+  color: #27282c;
+}
+
+#highlights .text-container p {
+  font-family: ProximaNova;
+  font-size: 0.8rem;
+  color: #27282c;
+  width: 85%;
+}
+
+/*============end highlights=========*/
+/*======Rating========*/
+#rating .img-container {
+  background-image: url(/assets/images/app_rating.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  border-radius: 20px;
+}
+
+#rating .img-container .rating-container {
+  padding: 10px 3rem;
+}
+
+#rating .img-container .rating-container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4rem;
+}
+
+#rating .img-container .rating-container .text p {
+  font-family: ProximaNovaExtraBold;
+  color: #fff;
+  font-size: 3.5rem;
+}
+
+#rating .img-container .rating-container .text span {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 20px;
+  left: 10px;
+  font-family: ProximaNovaSemiBold;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+
+#rating .img-container .rating-container .download-container {
+  width: 175px;
+}
+
+.btn-download {
+  background-color: #fff;
+  font-family: ProximaNova;
+  color: #034adb;
+  border-radius: 8px;
+  font-size: .8rem;
+}
+
+.btn-download span img {
+  height: 15px;
+}
+
+/*===================end rating=============*/
+/*================Experience===========*/
+.btn-submit {
+  background: #034adb;
+  font-size: .8rem;
+  font-family: ProximaNova;
+  color: #fff;
+}
+
+#experience .form-control {
+  width: 15rem;
+  border: 1px solid #adadad;
+  padding: 5px 15px;
+}
+
+#inputEmail::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: ProximaNova;
+  opacity: 1;
+  /* Firefox */
+  font-size: .8rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+#inputEmail:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: ProximaNova;
+  opacity: 1;
+  /* Firefox */
+  font-size: .8rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+#inputEmail::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: ProximaNova;
+  opacity: 1;
+  /* Firefox */
+  font-size: .8rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+#inputEmail::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: ProximaNova;
+  opacity: 1;
+  /* Firefox */
+  font-size: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*****==== end experience =====********/
+.download-img {
+  background-image: url(/assets/images/app_rating.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 10px;
+}
+
+#download .content-header-body h2 {
+  color: #fff;
+}
+
+#download .content-header-body .btn-container {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
