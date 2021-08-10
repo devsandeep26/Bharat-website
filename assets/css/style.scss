@@ -214,7 +214,7 @@ $text-color: #27282c;
 /*======Rating========*/
 
 #rating .img-container {
-  background-image: url(/assets/images/app_rating.png);
+  background-image: url("/assets/images/app_rating.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -292,7 +292,7 @@ $text-color: #27282c;
 
   /*****==== end experience =====********/
   .download-img {
-    background-image: url(/assets/images/app_rating.png);
+    background-image: url("/assets/images/app_rating.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

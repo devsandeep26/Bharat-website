@@ -232,7 +232,7 @@ a:active {
 /*============end highlights=========*/
 /*======Rating========*/
 #rating .img-container {
-  background-image: url(/assets/images/app_rating.png);
+  background-image: url("/assets/images/app_rating.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -355,7 +355,7 @@ a:active {
 
 /*****==== end experience =====********/
 .download-img {
-  background-image: url(/assets/images/app_rating.png);
+  background-image: url("/assets/images/app_rating.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
