@@ -63,6 +63,111 @@ a:active {
   width: 90%;
 }
 
+/**********Navbar section*******/
+header {
+  background: #fff;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(3, 74, 219, 0.13);
+          box-shadow: 0 10px 20px 0 rgba(3, 74, 219, 0.13);
+  height: 75px;
+}
+
+header .container {
+  max-width: 1024px;
+}
+
+header .logo {
+  float: left;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header .nav-list {
+  float: right;
+  position: relative;
+  top: 15px;
+}
+
+header .nav-list .nav-extras {
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav-list .nav-extras li .nav-links {
+  font-size: .85rem;
+  font-family: ProximaNova;
+  color: #27282c;
+  padding-top: 10px 15px;
+}
+
+header .nav-list .main-nav {
+  float: right;
+}
+
+/*************End navbar section*****/
+/*****Home section******/
+.main {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+#hero-section {
+  background: url("../images/home-bg.png") no-repeat center;
+  background-color: #fff;
+  background-size: cover;
+  padding-top: 0;
+  margin-top: 30px;
+}
+
+#hero-section .text-container {
+  padding-top: 60px;
+}
+
+#hero-section .text-container .title {
+  font-family: ProximaNovaExtraBold;
+}
+
+#hero-section .text-container .title h4 {
+  color: #27282c;
+  font-size: 1.5rem;
+}
+
+#hero-section .text-container .title h5 {
+  color: #034adb;
+  font-size: 2.5rem;
+  width: 50%;
+  line-height: .8;
+}
+
+#hero-section .text-container .title img {
+  height: 2rem;
+}
+
+#hero-section .text-container .description {
+  font-family: ProximaNova;
+}
+
+#hero-section .text-container .description p {
+  color: #27282c;
+  font-size: .85rem;
+}
+
+#hero-section .text-container .btn-container h5 {
+  color: #27282c;
+  font-family: ProximaNovaExtraBold;
+  font-size: 1.5rem;
+}
+
+#hero-section .text-container .btn-container .btn-download {
+  background: #034adb;
+  color: #fff;
+}
+
+/************End home section**********/
 /**===Browser features=====**/
 .content-header-container {
   width: 100%;
@@ -421,7 +526,7 @@ footer .follow-container {
 
 footer .follow-container h5 {
   font-family: ProximaNova;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: #27282c;
 }
 

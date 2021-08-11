@@ -75,6 +75,108 @@ $text-color: #27282c;
   @include marginAuto(90%);
 }
 
+
+/**********Navbar section*******/
+
+header {
+    background: #fff;
+    box-shadow: 0 10px 20px 0 rgba(3, 74, 219, 0.13);
+    height: 75px;
+    .container {
+        max-width: 1024px;
+    }
+    .logo {
+        float: left;
+        img {
+            height: 50px;
+        }
+    }
+
+    .nav-list {
+        float: right;
+        position: relative;
+        top: 15px;
+        .nav-extras {
+            float: left;
+            display: flex;
+            li {
+                .nav-links {
+                    font-size: .85rem;
+                    font-family: $paragraph-font;
+                    color: $text-color;
+                    padding-top: 10px 15px;
+                }
+            }
+        }
+        .main-nav {
+            float: right;
+        }
+    }
+
+    
+}
+
+
+
+/*************End navbar section*****/
+
+/*****Home section******/
+
+.main {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+#hero-section {
+    background: url("../images/home-bg.png") no-repeat center;
+    background-color: #fff;
+    background-size: cover;
+    padding-top: 0;
+    margin-top: 30px;
+
+    .text-container {
+        padding-top: 60px;
+        .title {
+            font-family: $header-font;
+            h4 {
+                color: $text-color;
+                font-size: 1.5rem;
+            }
+            h5 {
+                color: $blue;
+                font-size: 2.5rem;
+                width: 50%;
+                line-height: .8;
+            }
+            img {
+                height: 2rem;
+            }
+        }
+        .description {
+            font-family: $paragraph-font;
+            p {
+                color: $text-color;
+                font-size: .85rem;
+            }
+        }
+        .btn-container {
+            h5 {
+                color: $text-color;
+                font-family: $header-font;
+                font-size: 1.5rem;
+            }
+            .btn-download {
+                background: $blue;
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+/************End home section**********/
+
 /**===Browser features=====**/
 @at-root .content-header-container {
   width: 100%;
@@ -312,7 +414,7 @@ $text-color: #27282c;
 
 /*********footer***********/
 .footer-padding {
-    padding: 30px 10px;
+  padding: 30px 10px;
 }
 footer {
   .flex-container {
@@ -322,13 +424,13 @@ footer {
     justify-content: center;
     align-items: center;
   }
-//   .flex-container:first-child {
-//     flex: 1 1 20%;
-//   }
-//   .flex-container:not(:first-child) {
-//     justify-content: center;
-//     flex: 1 1 40%;
-//   }
+  //   .flex-container:first-child {
+  //     flex: 1 1 20%;
+  //   }
+  //   .flex-container:not(:first-child) {
+  //     justify-content: center;
+  //     flex: 1 1 40%;
+  //   }
   .img-container {
     img {
       height: 50px;
@@ -350,17 +452,17 @@ footer {
   }
 
   .follow-container {
-      margin: 0 auto;
-      h5 {
-          font-family: $paragraph-font;
-          font-size: .75rem;
-          color: $text-color;
-      }
+    margin: 0 auto;
+    h5 {
+      font-family: $paragraph-font;
+      font-size: 0.75rem;
+      color: $text-color;
+    }
     ul {
       display: flex;
       justify-content: center;
       li {
-          margin: 0px 5px;
+        margin: 0px 5px;
         .btn-img {
           span img {
             height: 30px;
