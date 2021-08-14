@@ -69,116 +69,182 @@ $text-color: #27282c;
   width: $value;
 }
 
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
 /*******=============***/
 
 .layout-margin {
   @include marginAuto(90%);
 }
 
-
 /**********Navbar section*******/
 
 header {
-    background: #fff;
-    box-shadow: 0 10px 20px 0 rgba(3, 74, 219, 0.13);
-    height: 75px;
-    .container {
-        max-width: 1024px;
+  background: #fff;
+  box-shadow: 0 10px 20px 0 rgba(3, 74, 219, 0.13);
+  height: 75px;
+  .container {
+    max-width: 1024px;
+  }
+  .logo {
+    float: left;
+    img {
+      height: 50px;
     }
-    .logo {
-        float: left;
-        img {
-            height: 50px;
-        }
-    }
+  }
 
-    .nav-list {
-        float: right;
-        position: relative;
-        top: 15px;
-        .nav-extras {
-            float: left;
-            display: flex;
-            li {
-                .nav-links {
-                    font-size: .85rem;
-                    font-family: $paragraph-font;
-                    color: $text-color;
-                    padding-top: 10px 15px;
-                }
-            }
+  .nav-list {
+    float: right;
+    position: relative;
+    top: 15px;
+    .nav-extras {
+      float: left;
+      display: flex;
+      li {
+        .nav-links {
+          font-size: 0.85rem;
+          font-family: $paragraph-font;
+          color: $text-color;
+          padding-top: 10px 15px;
         }
-        .main-nav {
-            float: right;
-        }
+      }
     }
-
-    
+    .main-nav {
+      float: right;
+    }
+  }
 }
-
-
 
 /*************End navbar section*****/
 
 /*****Home section******/
 
 .main {
-    position: relative;
-    z-index: 3;
-    overflow: hidden;
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+#desktop-only {
+  @include for-size(phone-only) {
+    display: none;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    display: block;
+  }
 }
 
 #hero-section {
-    background: url("../images/home-bg.png") no-repeat center;
-    background-color: #fff;
-    background-size: cover;
-    padding-top: 0;
-    margin-top: 30px;
+  background: url("../images/home-bg.png") no-repeat center;
+  background-color: #fff;
+  background-size: cover;
+  padding-top: 0;
+  margin-top: 30px;
 
-    .text-container {
-        padding-top: 60px;
-        .title {
-            font-family: $header-font;
-            h4 {
-                color: $text-color;
-                font-size: 1.5rem;
-            }
-            h5 {
-                color: $blue;
-                font-size: 2.5rem;
-                width: 50%;
-                line-height: .8;
-            }
-            img {
-                height: 2rem;
-            }
-        }
-        .description {
-            font-family: $paragraph-font;
-            p {
-                color: $text-color;
-                font-size: .85rem;
-            }
-        }
-        .btn-container {
-            h5 {
-                color: $text-color;
-                font-family: $header-font;
-                font-size: 1.5rem;
-            }
-            .btn-download {
-                background: $blue;
-                color: #fff;
-            }
-        }
+  @include for-size(phone-only) {
+    background-position: top;
+  }
+
+  .text-container {
+    padding-top: 60px;
+    .title {
+      font-family: $header-font;
+      h4 {
+        color: $text-color;
+        font-size: 1.5rem;
+      }
+      h5 {
+        color: $blue;
+        font-size: 2.5rem;
+        width: 50%;
+        line-height: 0.8;
+      }
+      img {
+        height: 2rem;
+      }
     }
-}
+    .description {
+      font-family: $paragraph-font;
+      p {
+        color: $text-color;
+        font-size: 0.85rem;
+        width: 85%;
+      }
+    }
+    .btn-container {
+      h5 {
+        color: $text-color;
+        font-family: $header-font;
+        font-size: 1.5rem;
+      }
+      .btn-download {
+        background: $blue;
+        color: #fff;
+      }
+    }
+  }
 
+  .title-container {
+    @include for-size(phone-only) {
+      margin-top: 2rem;
+      h5 {
+        font-family: $header-font;
+        font-size: 1.5rem;
+        color: $text-color;
+      }
+      h2 {
+        color: $blue;
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-family: $header-font;
+        line-height: 0.8;
+        span {
+          position: relative;
+          bottom: 20px;
+          right: 25px;
+          img {
+            height: 20px;
+          }
+        }
+      }
+      p {
+        font-family: $paragraph-font;
+        font-size: 1.5rem;
+        color: $text-color;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
 
 /************End home section**********/
 
 /**===Browser features=====**/
-@at-root .content-header-container {
+.content-header-container {
   width: 100%;
   height: 100%;
   margin-bottom: 50px;
@@ -238,6 +304,14 @@ header {
 .predict-margin {
   @include marginAuto(90%);
 }
+#features .feature-card {
+  @include for-size(phone-only) {
+    display: none;
+  }
+  @include for-size(tablet-landscape-up) {
+    display: block;
+  }
+}
 #features .card {
   display: flex;
   justify-content: center;
@@ -251,6 +325,9 @@ header {
     height: 75px;
     width: 75px;
   }
+  @include for-size(phone-only) {
+    height: auto;
+  }
 }
 
 #features .card-title {
@@ -262,6 +339,9 @@ header {
   color: $text-color;
   font-family: $header-font;
   font-size: 1.1rem;
+  @include for-size(phone-only) {
+    font-size: 0.85rem;
+  }
 }
 
 #features .card .card-body {
@@ -279,6 +359,10 @@ header {
   color: $text-color;
   font-family: $paragraph-font;
   height: 5rem;
+  @include for-size(phone-only) {
+    height: auto;
+    font-size: 0.7rem;
+  }
 }
 
 /**====highlights=====**/
@@ -288,16 +372,24 @@ header {
 }
 
 #highlights .img-container {
-  @include marginAuto(50%);
+  flex: 1 1 50%;
   display: flex;
   justify-content: center;
   img {
     height: 300px;
   }
+  @include for-size(phone-only) {
+    flex:  1 1 100%;
+    height: auto;
+  }
 }
 
 #highlights .text-container {
-  @include marginAuto(50%);
+  flex: 1 1 50%;
+  @include for-size(phone-only) {
+    flex: 1 1 100%;
+    height: auto;
+  }
   h5 {
     font-family: $header-font;
     font-size: 1.2rem;
@@ -424,13 +516,6 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  //   .flex-container:first-child {
-  //     flex: 1 1 20%;
-  //   }
-  //   .flex-container:not(:first-child) {
-  //     justify-content: center;
-  //     flex: 1 1 40%;
-  //   }
   .img-container {
     img {
       height: 50px;
@@ -466,6 +551,82 @@ footer {
         .btn-img {
           span img {
             height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-container-knowledge {
+  width: 50%;
+  height: 50%;
+}
+
+.swiper-slide {
+  @include for-size(phone-only) {
+    max-width: 60%;
+  }
+}
+
+.swiper-slide-1 {
+  height: calc((100% - 30px) / 2);
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  .card {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    .knowledge-container {
+      .text {
+        p {
+          font-family: $paragraph-font;
+          font-size: 0.75rem;
+          color: $text-color;
+          text-align: left;
+        }
+      }
+      .credit {
+        display: flex;
+        .logo {
+          img {
+            height: 40px;
+          }
+        }
+        .logo-text {
+          p {
+            margin-bottom: 0rem;
+            line-height: 0.8;
+            color: $text-color;
+            font-size: 0.85rem;
+            font-family: $paragraph-semi-bold-font;
+            text-align: left;
+          }
+          span {
+            color: $blue;
+            font-family: $paragraph-font;
+            font-size: 0.75rem;
           }
         }
       }

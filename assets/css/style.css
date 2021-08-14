@@ -97,7 +97,7 @@ header .nav-list .nav-extras {
 }
 
 header .nav-list .nav-extras li .nav-links {
-  font-size: .85rem;
+  font-size: 0.85rem;
   font-family: ProximaNova;
   color: #27282c;
   padding-top: 10px 15px;
@@ -115,12 +115,30 @@ header .nav-list .main-nav {
   overflow: hidden;
 }
 
+@media (max-width: 599px) {
+  #desktop-only {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  #desktop-only {
+    display: block;
+  }
+}
+
 #hero-section {
   background: url("../images/home-bg.png") no-repeat center;
   background-color: #fff;
   background-size: cover;
   padding-top: 0;
   margin-top: 30px;
+}
+
+@media (max-width: 599px) {
+  #hero-section {
+    background-position: top;
+  }
 }
 
 #hero-section .text-container {
@@ -140,7 +158,7 @@ header .nav-list .main-nav {
   color: #034adb;
   font-size: 2.5rem;
   width: 50%;
-  line-height: .8;
+  line-height: 0.8;
 }
 
 #hero-section .text-container .title img {
@@ -153,7 +171,8 @@ header .nav-list .main-nav {
 
 #hero-section .text-container .description p {
   color: #27282c;
-  font-size: .85rem;
+  font-size: 0.85rem;
+  width: 85%;
 }
 
 #hero-section .text-container .btn-container h5 {
@@ -165,6 +184,39 @@ header .nav-list .main-nav {
 #hero-section .text-container .btn-container .btn-download {
   background: #034adb;
   color: #fff;
+}
+
+@media (max-width: 599px) {
+  #hero-section .title-container {
+    margin-top: 2rem;
+  }
+  #hero-section .title-container h5 {
+    font-family: ProximaNovaExtraBold;
+    font-size: 1.5rem;
+    color: #27282c;
+  }
+  #hero-section .title-container h2 {
+    color: #034adb;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: ProximaNovaExtraBold;
+    line-height: 0.8;
+  }
+  #hero-section .title-container h2 span {
+    position: relative;
+    bottom: 20px;
+    right: 25px;
+  }
+  #hero-section .title-container h2 span img {
+    height: 20px;
+  }
+  #hero-section .title-container p {
+    font-family: ProximaNova;
+    font-size: 1.5rem;
+    color: #27282c;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
 }
 
 /************End home section**********/
@@ -245,6 +297,18 @@ header .nav-list .main-nav {
   width: 90%;
 }
 
+@media (max-width: 599px) {
+  #features .feature-card {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  #features .feature-card {
+    display: block;
+  }
+}
+
 #features .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,6 +332,12 @@ header .nav-list .main-nav {
   width: 75px;
 }
 
+@media (max-width: 599px) {
+  #features .card {
+    height: auto;
+  }
+}
+
 #features .card-title {
   /* font-weight: normal; */
   font-style: normal;
@@ -277,6 +347,12 @@ header .nav-list .main-nav {
   color: #27282c;
   font-family: ProximaNovaExtraBold;
   font-size: 1.1rem;
+}
+
+@media (max-width: 599px) {
+  #features .card-title {
+    font-size: 0.85rem;
+  }
 }
 
 #features .card .card-body {
@@ -296,14 +372,22 @@ header .nav-list .main-nav {
   height: 5rem;
 }
 
+@media (max-width: 599px) {
+  #features .card-body .card-text {
+    height: auto;
+    font-size: 0.7rem;
+  }
+}
+
 /**====highlights=====**/
 #highlights .col-md-12:not(:last-child) {
   margin-bottom: 3rem;
 }
 
 #highlights .img-container {
-  margin: 0 auto;
-  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,9 +400,28 @@ header .nav-list .main-nav {
   height: 300px;
 }
 
+@media (max-width: 599px) {
+  #highlights .img-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    height: auto;
+  }
+}
+
 #highlights .text-container {
-  margin: 0 auto;
-  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+@media (max-width: 599px) {
+  #highlights .text-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    height: auto;
+  }
 }
 
 #highlights .text-container h5 {
@@ -545,5 +648,77 @@ footer .follow-container ul li {
 
 footer .follow-container ul li .btn-img span img {
   height: 30px;
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-container-knowledge {
+  width: 50%;
+  height: 50%;
+}
+
+@media (max-width: 599px) {
+  .swiper-slide {
+    max-width: 60%;
+  }
+}
+
+.swiper-slide-1 {
+  height: calc((100% - 30px) / 2);
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide-1 .card {
+  width: 90%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
+
+.swiper-slide-1 .card .knowledge-container .text p {
+  font-family: ProximaNova;
+  font-size: 0.75rem;
+  color: #27282c;
+  text-align: left;
+}
+
+.swiper-slide-1 .card .knowledge-container .credit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper-slide-1 .card .knowledge-container .credit .logo img {
+  height: 40px;
+}
+
+.swiper-slide-1 .card .knowledge-container .credit .logo-text p {
+  margin-bottom: 0rem;
+  line-height: 0.8;
+  color: #27282c;
+  font-size: 0.85rem;
+  font-family: ProximaNovaSemiBold;
+  text-align: left;
+}
+
+.swiper-slide-1 .card .knowledge-container .credit .logo-text span {
+  color: #034adb;
+  font-family: ProximaNova;
+  font-size: 0.75rem;
 }
 /*# sourceMappingURL=style.css.map */
