@@ -16,8 +16,10 @@
 
 <body>
     <div class="main">
-        <header>
+        <header data-nav="lg" id="header">
             <div class="container">
+                <span class="breadcrum" id="nav-breadcrumb"><img src="assets/images/breadcrumb.svg" class="img-fluid"
+                        alt=""></span>
                 <h1 class="logo">
                     <img src="assets/icons/bharat-logo.png" class="img-fluid" alt="">
                 </h1>
@@ -553,6 +555,17 @@
             }
         }
     });
+    document.getElementById("nav-breadcrumb").addEventListener('click', () => {
+        console.log('breadcrum clicked');
+        const nav_ele = document.getElementById("header");
+        const nav_attr = nav_ele.getAttribute('data-nav');
+        if(nav_attr == 'lg') {
+            nav_ele.setAttribute('data-nav', 'sm')
+        } else {
+            nav_ele.setAttribute('data-nav', 'lg')
+        }
+
+    })
 </script>
 
 </html>

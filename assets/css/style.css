@@ -71,8 +71,26 @@ header {
   height: 75px;
 }
 
+@media (max-width: 599px) {
+  header {
+    padding: 5px;
+  }
+}
+
 header .container {
   max-width: 1024px;
+}
+
+@media (max-width: 599px) {
+  header .container .breadcrum {
+    float: left;
+  }
+}
+
+@media (min-width: 600px) {
+  header .container .breadcrum {
+    display: none;
+  }
 }
 
 header .logo {
@@ -83,10 +101,22 @@ header .logo img {
   height: 50px;
 }
 
+@media (max-width: 599px) {
+  header .logo img {
+    height: 35px;
+  }
+}
+
 header .nav-list {
   float: right;
   position: relative;
   top: 15px;
+}
+
+@media (max-width: 599px) {
+  header .nav-list {
+    width: 100%;
+  }
 }
 
 header .nav-list .btn-download {
@@ -99,6 +129,12 @@ header .nav-list .nav-extras {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 599px) {
+  header .nav-list .nav-extras {
+    display: none;
+  }
 }
 
 header .nav-list .nav-extras li .nav-links {
@@ -117,6 +153,20 @@ header .nav-list .main-nav {
     position: absolute;
     top: -3rem;
     right: 1rem;
+  }
+}
+
+header[data-nav="sm"] {
+  height: 175px;
+}
+
+header[data-nav="sm"] .nav-list {
+  width: 100%;
+}
+
+@media (max-width: 599px) {
+  header[data-nav="sm"] .nav-list .nav-extras {
+    display: block;
   }
 }
 
@@ -454,6 +504,7 @@ header .nav-list .main-nav {
   }
   #highlights .predict-margin .col-md-12 .text-container p {
     width: 100%;
+    text-align: center;
   }
   #highlights .predict-margin .col-md-12 .img-container img {
     height: auto;

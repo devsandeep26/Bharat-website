@@ -105,13 +105,29 @@ header {
   background: #fff;
   box-shadow: 0 10px 20px 0 rgba(3, 74, 219, 0.13);
   height: 75px;
+  @include for-size(phone-only) {
+    padding: 5px;
+  }
   .container {
     max-width: 1024px;
+    @include for-size(phone-only) {
+      .breadcrum {
+        float: left;
+      }
+    }
+    @include for-size(tablet-portrait-up) {
+      .breadcrum {
+        display: none;
+      }
+    }
   }
   .logo {
     float: left;
     img {
       height: 50px;
+      @include for-size(phone-only) {
+        height: 35px;
+      }
     }
   }
 
@@ -119,6 +135,9 @@ header {
     float: right;
     position: relative;
     top: 15px;
+    @include for-size(phone-only) {
+      width: 100%;
+    }
     .btn-download {
       background-color: $blue;
       color: #fff;
@@ -126,6 +145,9 @@ header {
     .nav-extras {
       float: left;
       display: flex;
+      @include for-size(phone-only) {
+        display: none;
+      }
       li {
         .nav-links {
           font-size: 0.85rem;
@@ -141,6 +163,21 @@ header {
         position: absolute;
         top: -3rem;
         right: 1rem;
+      }
+    }
+  }
+}
+
+header[data-nav="sm"] {
+  height: 175px;
+  // transition: all .5s ease-in-out;
+
+  .nav-list {
+    width: 100%;
+    .nav-extras {
+      @include for-size(phone-only) {
+        display: block;
+        // transition: all .5s ease-in-out;
       }
     }
   }
@@ -421,6 +458,7 @@ header {
         }
         p {
           width: 100%;
+          text-align: center;
         }
       }
       .img-container {
