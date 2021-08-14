@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Bharat Browser</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -65,7 +65,7 @@
                             <img src="assets/images/hero-img.png" class="img-fluid" alt="">
                         </div>
                     </div>
-                    <div class="col-md-6 .d-none .d-sm-block .d-md-none text-center">
+                    <div class="col-md-6 .d-none .d-sm-block .d-md-none text-center" id="mobile-only">
                         <div class="title-container d-flex flex-column justify-content-center align-items-center">
                             <h5>Made for</h5>
                             <h2>India <span><img src="assets/icons/flag-mobile.png" class="img-fluid" alt=""></span>
@@ -94,8 +94,8 @@
                         </div>
                     </div>
                     <div class="row predict-margin" id="believe">
-                        <div class="col-md-12 p-0 .d-none .d-sm-block .d-md-none">
-                            <div class="swiper-container">
+                        <div class="col-md-12 p-0 carousel-box">
+                            <div class="swiper-container-1">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
@@ -150,7 +150,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 p-0 feature-card">
+                        <div class="row p-0 mr-auto ml-auto card-box">
                             <div class="col-md-4 p-0">
                                 <div class="card">
                                     <img src="assets/icons/Group 943.png" class="img-fluid" alt="..." />
@@ -265,7 +265,7 @@
                         </div>
                     </div>
                     <div class="row predict-margin">
-                        <div class="col-md-12 d-flex justify-content-center align-items-center">
+                        <div class="col-md-12 p-0 d-flex justify-content-center align-items-center">
                             <div class="img-container">
                                 <img src="assets/images/Group 969.png" alt="" class="img-fluid">
                             </div>
@@ -275,7 +275,7 @@
                                     engine to block annoying ads</p>
                             </div>
                         </div>
-                        <div class="col-md-12 d-flex justify-content-center align-items-center">
+                        <div class="col-md-12 p-0 d-flex justify-content-center align-items-center">
                             <div class="text-container">
                                 <h5>Social Media Downloader</h5>
                                 <p>Download your favorite videos and images
@@ -286,7 +286,7 @@
                                 <img src="assets/images/Group 968.png" alt="" class="img-fluid">
                             </div>
                         </div>
-                        <div class="col-md-12 d-flex justify-content-center align-items-center">
+                        <div class="col-md-12 p-0 d-flex justify-content-center align-items-center">
                             <div class="img-container">
                                 <img src="assets/images/Group 971.png" alt="" class="img-fluid">
                             </div>
@@ -303,7 +303,7 @@
         <section id="rating">
             <div class="container mt50">
                 <div class="row layout-margin">
-                    <div class="col-md-12 ml-auto mr-auto">
+                    <div class="col-md-12 p-0 ml-auto mr-auto">
                         <div class="img-container">
                             <div class="rating-container">
                                 <div class="text">
@@ -336,10 +336,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 mr-auto ml-auto">
-                        <div class="swiper-container-knowledge mySwiper">
+                    <div class="col-md-12">
+                        <div class="swiper-container mySwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide-1">
+                                <div class="swiper-slide">
                                     <div class="card">
                                         <div class="knowledge-container">
                                             <div class="text">
@@ -361,7 +361,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide-1">
+                                <div class="swiper-slide">
                                     <div class="card">
                                         <div class="knowledge-container">
                                             <div class="text">
@@ -383,7 +383,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide-1">
+                                <div class="swiper-slide">
                                     <div class="card">
                                         <div class="knowledge-container">
                                             <div class="text">
@@ -405,7 +405,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide-1">
+                                <div class="swiper-slide">
                                     <div class="card">
                                         <div class="knowledge-container">
                                             <div class="text">
@@ -531,34 +531,27 @@
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper('.swiper-container-1', {
         // Optional parameters
         centeredSlides: true,
         loop: true,
         initialSlide: 2,
         slidesPerView: 1.2,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
     });
 
-    const swiper_knowledge = new Swiper('.swiper-container-knowledge', {
-        slidesPerView: 3,
-        slidesPerColumn: 2,
+    const swiper_knowledge = new Swiper('.mySwiper', {
+        slidesPerView: 2,
         spaceBetween: 30,
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                slidesPerColumn: 1
+            },
+            640: {
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+            }
+        }
     });
 </script>
 
