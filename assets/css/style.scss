@@ -119,6 +119,10 @@ header {
     float: right;
     position: relative;
     top: 15px;
+    .btn-download {
+      background-color: $blue;
+      color: #fff;
+    }
     .nav-extras {
       float: left;
       display: flex;
@@ -133,6 +137,11 @@ header {
     }
     .main-nav {
       float: right;
+      @include for-size(phone-only) {
+        position: absolute;
+        top: -3rem;
+        right: 1rem;
+      }
     }
   }
 }
@@ -571,12 +580,16 @@ header {
 
 /*****==== end experience =====********/
 .download-img {
-  background-image: url("../images/app_rating.png");
+  background-image: url("../images/download_bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 10rem;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #download .content-header-body {
@@ -601,6 +614,9 @@ footer {
     flex: 1 1 33%;
     justify-content: center;
     align-items: center;
+    @include for-size(phone-only) {
+      flex: 1 1 100%;
+    }
   }
   .img-container {
     img {
@@ -611,31 +627,60 @@ footer {
   .link-container ul {
     display: flex;
     justify-content: center;
+    @include for-size(phone-only) {
+      display: block;
+      margin-top: 2rem;
+    }
     li {
+      @include for-size(phone-only) {
+        margin-bottom: 1rem;
+      }
       .btn-link {
         font-family: $paragraph-font;
         font-size: 0.75rem;
         color: $text-color;
         text-decoration: none;
         padding: 0px 5px;
+        @include for-size(phone-only) {
+          font-family: $paragraph-semi-bold-font;
+          font-size: 1rem;
+        }
       }
     }
   }
 
   .follow-container {
     margin: 0 auto;
+    @include for-size(phone-only) {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
     h5 {
       font-family: $paragraph-font;
       font-size: 0.75rem;
       color: $text-color;
+      @include for-size(phone-only) {
+        font-family: $paragraph-semi-bold-font;
+        font-size: 1rem;
+        text-align: center;
+        position: relative;
+        right: 1.5rem;
+        margin-bottom: 1rem;
+      }
     }
     ul {
       display: flex;
       justify-content: center;
       li {
         margin: 0px 5px;
+        @include for-size(phone-only) {
+          margin: 0 10px;
+        }
         .btn-img {
           span img {
+            @include for-size(phone-only) {
+              height: 50px;
+            }
             height: 30px;
           }
         }

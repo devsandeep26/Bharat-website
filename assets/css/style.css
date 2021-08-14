@@ -89,6 +89,11 @@ header .nav-list {
   top: 15px;
 }
 
+header .nav-list .btn-download {
+  background-color: #034adb;
+  color: #fff;
+}
+
 header .nav-list .nav-extras {
   float: left;
   display: -webkit-box;
@@ -105,6 +110,14 @@ header .nav-list .nav-extras li .nav-links {
 
 header .nav-list .main-nav {
   float: right;
+}
+
+@media (max-width: 599px) {
+  header .nav-list .main-nav {
+    position: absolute;
+    top: -3rem;
+    right: 1rem;
+  }
 }
 
 /*************End navbar section*****/
@@ -675,12 +688,25 @@ header .nav-list .main-nav {
 
 /*****==== end experience =====********/
 .download-img {
-  background-image: url("../images/app_rating.png");
+  background-image: url("../images/download_bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 10rem;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #download .content-header-body h2 {
@@ -714,6 +740,14 @@ footer .flex-container {
           align-items: center;
 }
 
+@media (max-width: 599px) {
+  footer .flex-container {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+
 footer .img-container img {
   height: 50px;
 }
@@ -727,6 +761,19 @@ footer .link-container ul {
           justify-content: center;
 }
 
+@media (max-width: 599px) {
+  footer .link-container ul {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 599px) {
+  footer .link-container ul li {
+    margin-bottom: 1rem;
+  }
+}
+
 footer .link-container ul li .btn-link {
   font-family: ProximaNova;
   font-size: 0.75rem;
@@ -735,14 +782,39 @@ footer .link-container ul li .btn-link {
   padding: 0px 5px;
 }
 
+@media (max-width: 599px) {
+  footer .link-container ul li .btn-link {
+    font-family: ProximaNovaSemiBold;
+    font-size: 1rem;
+  }
+}
+
 footer .follow-container {
   margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+  footer .follow-container {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
 }
 
 footer .follow-container h5 {
   font-family: ProximaNova;
   font-size: 0.75rem;
   color: #27282c;
+}
+
+@media (max-width: 599px) {
+  footer .follow-container h5 {
+    font-family: ProximaNovaSemiBold;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    right: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }
 
 footer .follow-container ul {
@@ -758,8 +830,20 @@ footer .follow-container ul li {
   margin: 0px 5px;
 }
 
+@media (max-width: 599px) {
+  footer .follow-container ul li {
+    margin: 0 10px;
+  }
+}
+
 footer .follow-container ul li .btn-img span img {
   height: 30px;
+}
+
+@media (max-width: 599px) {
+  footer .follow-container ul li .btn-img span img {
+    height: 50px;
+  }
 }
 
 .swiper-container-1 {
